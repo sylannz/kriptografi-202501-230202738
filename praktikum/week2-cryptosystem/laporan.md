@@ -1,69 +1,104 @@
 # Laporan Praktikum Kriptografi
 
 Minggu ke-: 2
-Topik: [judul praktikum]  
+Topik: Cryptosystem (Komponen, Enkripsi & Dekripsi, Simetris & Asimetris)
 Nama: Asmoko Khusnul Tri Maulana
 NIM: 230202738
-Kelas: 5IKrB
+Kelas: 5IKRB
 
 ---
 
 ## 1. Tujuan
 
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Memahami komponen-komponen dasar yang membentuk sebuah kriptosistem.
+Mampu mengimplementasikan algoritma enkripsi-dekripsi sederhana.
+Memahami perbedaan fundamental, kelebihan, dan kelemahan sistem simetris dan asimetris.
+Menganalisis masalah utama dalam sistem kriptografi, seperti distribusi kunci.
 
 ---
 
 ## 2. Dasar Teori
 
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll. )
+Kriptografi adalah ilmu dan seni untuk menjaga keamanan pesan. Sebuah sistem kriptografi atau kriptosistem terdiri dari serangkaian algoritma dan protokol untuk mengamankan komunikasi. Salah satu bentuk kriptografi paling awal adalah cipher klasik seperti Caesar Cipher, yang merupakan substitution cipher di mana setiap huruf digantikan oleh huruf lain berdasarkan kunci pergeseran. Meskipun sederhana, ia menjadi dasar untuk memahami konsep kunci, enkripsi, dan dekripsi.
+
+Secara umum, kriptografi modern terbagi menjadi dua kategori utama berdasarkan cara penggunaan kuncinya: simetris dan asimetris.
+
+Kriptografi Simetris (Private Key Cryptography)
+Dalam sistem ini, satu kunci rahasia (private key) yang sama digunakan untuk proses enkripsi dan dekripsi. Pengirim dan penerima harus memiliki kunci yang identik sebelum berkomunikasi. Karena proses komputasinya yang sederhana, algoritma ini sangat cepat dan efisien untuk mengenkripsi data dalam jumlah besar. Tantangan utamanya adalah bagaimana cara membagikan kunci rahasia ini secara aman (masalah distribusi kunci).
+Contoh Algoritma Simetris:
+a. AES (Advanced Encryption Standard): Standar industri saat ini yang dianggap sangat aman dan efisien. AES digunakan secara luas di berbagai aplikasi, mulai dari keamanan Wi-Fi (WPA2/WPA3) hingga enkripsi database.
+b. DES (Data Encryption Standard): Standar yang lebih tua. Karena panjang kuncinya yang pendek (56-bit), DES sudah dianggap tidak aman untuk aplikasi modern karena rentan terhadap serangan brute-force.
+Kriptografi Asimetris (Public Key Cryptography)
+Sistem ini menggunakan sepasang kunci yang saling berhubungan secara matematis: kunci publik (public key) dan kunci privat (private key).
+a. Kunci Publik: Dapat dibagikan secara bebas. Digunakan untuk mengenkripsi pesan.
+b. Kunci Privat: Harus dijaga kerahasiaannya oleh pemilik. Digunakan untuk mendekripsi pesan.
+Pesan yang dienkripsi dengan kunci publik seseorang hanya bisa didekripsi oleh kunci privat pasangannya. Sistem ini memecahkan masalah distribusi kunci, namun proses komputasinya jauh lebih lambat dibandingkan kriptografi simetris.
+Contoh Algoritma Asimetris:
+a. RSA (Rivest-Shamir-Adleman): Salah satu algoritma asimetris pertama dan paling terkenal. Keamanannya didasarkan pada kesulitan matematis untuk memfaktorkan bilangan prima yang sangat besar. RSA banyak digunakan untuk tanda tangan digital dan pertukaran kunci aman (misalnya dalam protokol TLS/SSL).
+b. ECC (Elliptic Curve Cryptography): Alternatif modern untuk RSA yang menawarkan tingkat keamanan yang sama dengan panjang kunci yang jauh lebih pendek. Ini membuatnya sangat efisien untuk perangkat dengan sumber daya terbatas, seperti smartphone.
 
 ---
 
 ## 3. Alat dan Bahan
 
-(- Python 3.x
-
-- Visual Studio Code / editor lain
-- Git dan akun GitHub
-- Library tambahan (misalnya pycryptodome, jika diperlukan) )
+Python 3.13
+Visual Studio Code
+Git dan akun GitHub
 
 ---
 
 ## 4. Langkah Percobaan
 
-(Tuliskan langkah yang dilakukan sesuai instruksi.  
-Contoh format:
-
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
-2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+Membuat direktori baru dengan nama week2-cryptosystem di dalam repositori praktikum.
+Membuat file simple_crypto.py di dalam sub-direktori src/.
+Menuliskan kode program untuk implementasi Caesar Cipher yang mencakup fungsi enkripsi dan dekripsi.
+Menambahkan fungsi main untuk interaksi dengan pengguna, yang memungkinkan input teks, kunci, dan pilihan mode (enkripsi atau dekripsi).
+Menjalankan program dari terminal dengan perintah python src/simple_crypto.py.
+Melakukan beberapa pengujian dengan pesan dan kunci yang berbeda untuk memverifikasi fungsionalitas program.
+Mengambil screenchot dari hasil eksekusi program untuk dilampirkan dalam laporan.
 
 ---
 
 ## 5. Source Code
 
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+def encrypt(plaintext, key):
+result = ""
+for char in plaintext:
+if char.isalpha():
+shift = 65 if char.isupper() else 97
+result += chr((ord(char) - shift + key) % 26 + shift)
+elif char.isdigit():
+result += chr((ord(char) - ord('0') + key) % 10 + ord('0'))
+else:
+result += char
+return result
 
-```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
+def decrypt(ciphertext, key):
+result = ""
+for char in ciphertext:
+if char.isalpha():
+shift = 65 if char.isupper() else 97
+result += chr((ord(char) - shift - key) % 26 + shift)
+elif char.isdigit():
+result += chr((ord(char) - ord('0') - key) % 10 + ord('0'))
+else:
+result += char
+return result
 
-)
+if **name** == "**main**":
+message = "<230202738><Asmoko Khusnul Tri Maulana>"
+key = 5
+
+    enc = encrypt(message, key)
+    dec = decrypt(enc, key)
+
+    print("Plaintext :", message)
+    print("Ciphertext:", enc)
+    print("Decrypted :", dec)
 
 ---
 
 ## 6. Hasil dan Pembahasan
-
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).
-
-- Berikan tabel atau ringkasan hasil uji jika diperlukan.
-- Jelaskan apakah hasil sesuai ekspektasi.
-- Bahas error (jika ada) dan solusinya.
 
 Hasil eksekusi program Caesar Cipher:
 
