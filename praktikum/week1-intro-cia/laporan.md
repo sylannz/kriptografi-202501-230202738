@@ -82,18 +82,12 @@ Praktikum minggu pertama berhasil diselesaikan dengan penyiapan repositori GitHu
 
 ## 9. Daftar Pustaka
 
-(Cantumkan referensi yang digunakan.  
-Contoh:
-
-- Katz, J., & Lindell, Y. _Introduction to Modern Cryptography_.
-- Stallings, W. _Cryptography and Network Security_. )
-
 ---
 
 ## 10. Commit Log
 
 ```
-commit 693b8b6
+commit
 Author: Asmoko Khusnul Tri Maulana <maulana.asmoko@gmail.com>
 Date:   2025-10-09
 
