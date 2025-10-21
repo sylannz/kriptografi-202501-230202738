@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
 
-Minggu ke-: X  
+Minggu ke-: 2
 Topik: [judul praktikum]  
 Nama: [Nama Mahasiswa]  
 NIM: [NIM Mahasiswa]  
