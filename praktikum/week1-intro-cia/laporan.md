@@ -87,7 +87,7 @@ Praktikum minggu pertama berhasil diselesaikan dengan penyiapan repositori GitHu
 ## 10. Commit Log
 
 ```
-commit
+commit 0dfc99ddc847a60a3bd05bab32e0f5cd8ba8c034
 Author: Asmoko Khusnul Tri Maulana <maulana.asmoko@gmail.com>
 Date:   2025-10-09
 
