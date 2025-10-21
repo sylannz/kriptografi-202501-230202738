@@ -100,50 +100,42 @@ key = 5
 
 ## 6. Hasil dan Pembahasan
 
-Hasil eksekusi program Caesar Cipher:
+Program Caesar Cipher berhasil diimplementasikan sesuai dengan tujuan praktikum. Pengujian fungsionalitas dilakukan dengan beberapa skenario input untuk memvalidasii proses enkripsi dan dekripsi. Hasilnya disajikan dalam tabel berikut:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+| Plaintext                            | Kunci |  Mode  | Hasil Program                        | Status |
+| :----------------------------------- | :---: | :----: | :----------------------------------- | :----- |
+| 230202738 Asmoko Khusnul Tri Maulana |   5   | enkrip | 785757283 Fxrtpt Pmzxszq Ywn Rfzqfsf | Sesuai |
+| 785757283 Fxrtpt Pmzxszq Ywn Rfzqfsf |   5   | dekrip | 230202738 Asmoko Khusnul Tri Maulana | Sesuai |
+
+Seperti yang ditunjukkan pada tabel, program berjalan tanpa error dan memberikan output yang benar sesuai dengan prinsip kerja Caesar Cipher.
+
+![Hasil Eksekusi](screenshots/Screenshot.png)
+![Hasil Input](screenshots/diagram_kriptosistem.png)
 
 ---
 
 ## 7. Jawaban Pertanyaan
 
-(Jawab pertanyaan diskusi yang diberikan pada modul.
-
-- Pertanyaan 1: …
-- Pertanyaan 2: …  
-  )
+Komponen utama dalam sebuah kriptosistem terdiri dari plaintext (data asli), ciphertext (data yang telah dienkripsi), algoritma enkripsi dan dekripsi, serta kunci (key) yang digunakan dalam proses transformasi data. Enkripsi mengubah plaintext menjadi ciphertext menggunakan algoritma dan kunci, sedangkan dekripsi mengembalikan ciphertext menjadi plaintext dengan kunci yang sesuai. Sistem kriptografi simetris memiliki kelebihan dalam hal kecepatan dan efisiensi karena hanya menggunakan satu kunci untuk proses enkripsi dan dekripsi. Namun, kelemahannya adalah adanya masalah keamanan dalam distribusi kunci, karena kedua pihak harus memiliki kunci yang sama sebelum komunikasi dapat dilakukan. Di sisi lain, sistem asimetris menggunakan sepasang kunci (publik dan privat) yang lebih aman untuk pertukaran informasi, tetapi prosesnya lebih lambat dan membutuhkan sumber daya lebih besar. Distribusi kunci menjadi masalah utama dalam kriptografi simetris karena kunci yang sama harus dikirim atau dibagikan secara aman kepada pihak lain. Jika proses distribusi ini tidak dilakukan dengan hati-hati, pihak ketiga dapat menyadap atau mencuri kunci tersebut, yang akan mengakibatkan kebocoran data karena kunci tersebut digunakan untuk membuka semua komunikasi yang dilindungi oleh sistem tersebut.
 
 ---
 
 ## 8. Kesimpulan
 
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan. )
+Kriptosistem merupakan fondasi penting dalam menjaga keamanan komunikasi dengan menggunakan proses enkripsi dan dekripsi yang melibatkan plaintext, ciphertext, algoritma, dan kunci. Sistem kriptografi simetris menawarkan kecepatan dan efisiensi, tetapi menghadapi tantangan besar dalam distribusi kunci yang aman. Sementara itu, kriptografi asimetris lebih aman dalam pertukaran kunci karena menggunakan pasangan kunci publik dan privat, meskipun lebih lambat dan kompleks. Oleh karena itu, kombinasi kedua metode ini sering digunakan dalam praktik untuk memanfaatkan kelebihan masing-masing, sehingga komunikasi data dapat terlindungi secara optimal.
 
 ---
 
 ## 9. Daftar Pustaka
 
-(Cantumkan referensi yang digunakan.  
-Contoh:
-
-- Katz, J., & Lindell, Y. _Introduction to Modern Cryptography_.
-- Stallings, W. _Cryptography and Network Security_. )
-
 ---
 
 ## 10. Commit Log
 
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-
 ```
-commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+commit e5f7ea7b9f12534eeb3f16a4faf10abf65d8c14e
+Author: Asmoko Khusnul Tri Maulana <maulana.asmoko@gmail.com>
+Date:   2025-10-21
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
