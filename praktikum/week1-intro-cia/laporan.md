@@ -1,10 +1,10 @@
 # Laporan Praktikum Kriptografi
 
-Minggu ke-: 1  
+Minggu ke-: 1
 Topik: Sejarah Kriptografi & Prinsip CIA
 Nama: Asmoko Khusnul Tri Maulana  
-NIM: 230202738  
-Kelas: 5IKRB
+ NIM: 230202738  
+ Kelas: 5IKRB
 
 ---
 
