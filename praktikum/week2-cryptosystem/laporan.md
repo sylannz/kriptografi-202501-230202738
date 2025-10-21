@@ -3,7 +3,7 @@
 Minggu ke-: 2
 Topik: [judul praktikum]  
 Nama: Asmoko Khusnul Tri Maulana
-NIM: [NIM Mahasiswa]  
+NIM: 230202738
 Kelas: 5IKrB
 
 ---
