@@ -2,7 +2,7 @@
 
 Minggu ke-: 2
 Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
+Nama: Asmoko
 NIM: [NIM Mahasiswa]  
 Kelas: 5IKrB
 
